@@ -7,10 +7,8 @@
             Desmaretz stephane
           </v-col>
           <v-col cols="12" md="6" align="right">
-            <v-btn class="icon" color="#00ACEE" target="_blank" tile to="//twitter.com/WendyMa64422957"><v-icon>mdi-twitter</v-icon></v-btn>  
-            <v-btn class="icon" color="#c4302b" target="_blank" tile to="//www.youtube.com/channel/UCgNVngS9U_xtQHpYflBrVXg?view_as=subscriber"><v-icon>mdi-youtube</v-icon></v-btn>  
-            <v-btn class="icon" color="#0e76a8" target="_blank" tile to="//www.linkedin.com/feed/"><v-icon>mdi-linkedin</v-icon></v-btn>  
-            <v-btn class="icon" color="#FFF" target="_blank" tile to="//github.com/stephanedev85"><v-icon>mdi-git</v-icon></v-btn>  
+            <v-btn v-for="(social, index) in socialLink" :key="social.name+index" class="icon" color="#fff" tile target="_blank" :to="social.url"><v-icon>{{social.icon}}</v-icon></v-btn>  
+            
           </v-col>
         </v-row>
         <v-card tile>
@@ -61,7 +59,34 @@ export default {
 
   data(){
     return{
-      profileImage: require('./assets/penguin.png')
+      profileImage: require('./assets/penguin.png'),
+      socialLink:[
+        {
+          id: 1,
+          icon: 'mdi-twitter',
+          url: '//twitter.com/WendyMa64422957',
+          name: 'facebook'
+        },
+        {
+          id: 2,
+          icon: 'mdi-youtube',
+          url: '//www.youtube.com/channel/UCgNVngS9U_xtQHpYflBrVXg?view_as=subscriber',
+          name: 'Youtube'
+        },
+        {
+          id: 3,
+          icon: 'mdi-linkedin',
+          url: '//www.linkedin.com/feed/',
+          name: 'Linkedin'
+        },
+        {
+          id: 4,
+          icon: 'mdi-git',
+          url: '//github.com/stephanedev85',
+          name: 'Github'
+        }
+      ]
+
     }
   }
  
