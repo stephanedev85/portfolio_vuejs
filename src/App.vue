@@ -40,12 +40,13 @@
             <v-card-actions class="elevation-0">
               <v-toolbar-items>
                 <v-btn color="secondary" text>À propos</v-btn>
-                <v-btn color="secondary" text>CV</v-btn>
-                <v-btn color="secondary" text>la revue</v-btn>
-                <v-btn color="secondary" text>Contact</v-btn>
+                <v-btn color="secondary" text to="/">CV</v-btn>
+                <v-btn color="secondary" text to="/Commentaires">Commentaires</v-btn>
+                <v-btn color="secondary" text to="/Contact">Contact</v-btn>
               </v-toolbar-items>  
             </v-card-actions>
         </v-card>
+        <router-view></router-view>
       </v-content>
     </v-container>
   </v-app>
