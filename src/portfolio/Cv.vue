@@ -14,7 +14,7 @@
                           <span>Expériences professionnelles</span>
                           <span class="sub-heading-icon"><v-icon class="white--text">mdi-worker</v-icon></span>
                       </div>
-                      <div class="resume-item" v-for="(experience, index) in Experiences" :key="index">
+                      <div class="resume-item" v-for="(experience, p) in Experiences" :key="p">
                           <div class="resume-item-heading">
                              <div class="title"> {{experience.designation}}</div>
                               <div class="resume-item-period">{{experience.date}} 
@@ -28,7 +28,7 @@
                           <span>Diplômes et formations.</span>
                           <span class="sub-heading-icon"><v-icon class="white--text">mdi-school</v-icon></span>
                       </div>
-                      <div class="resume-item" v-for="(diplome, index) in   Diplomes" :key="index">
+                      <div class="resume-item" v-for="(diplome, x) in   Diplomes" :key="x">
                           <div class="resume-item-heading">
                              <div class="title"> {{diplome.titre}}</div>
                               <div class="resume-item-period">{{diplome.date}} 
@@ -37,20 +37,48 @@
                           <div class="resume-item-description bb">{{diplome.certificat}}</div>
                           </div>
                       </div>
-                    <!--SECTION CENTRE D' INTERET -->
-                              <div class="sub-heading mt-8">
+                    <!--SECTION CENTRE D' INTERET INFORMATIQUE -->
+                        <div class="sub-heading mt-8">
                           <span>Centres d'intérêt informatiques.</span>
                           <span class="sub-heading-icon"><v-icon class="white--text">mdi-basketball</v-icon></span>
                       </div>
-                      <div class="resume-item" v-for="(loisir, index) in   Hobby" :key="index">
+                      <div class="resume-item" v-for="(loisir, d) in   Hobby" :key="d">
                           <div class="resume-item-heading">
                              <div class="resume-item-description bb mt-8"> {{loisir.titre}}</div>
-                              
-                          
-                          
-                          
                           </div>
                       </div>
+                      <!--SECTION CENTRE D'INTERET -->
+                                <div class="sub-heading mt-8">
+                          <span>Centres d'intérêt.</span>
+                          <span class="sub-heading-icon"><v-icon class="white--text">mdi-baseball</v-icon></span>
+                      </div>
+                      <div class="resume-item" v-for="(loisir, n) in   Loisir" :key="n">
+                          <div class="resume-item-heading">
+                             <div class="resume-item-description bb mt-8"> {{loisir.titre}}</div>
+                          </div>
+                      </div>
+                      <!-- ADRESSE -->
+                        <v-card class="mt-8">
+                         <v-img
+                            class="black--text"
+                            height="200px"
+                            v-bind:src="codeImage">
+                            <v-container fill-height fluid>
+                                 <v-layout fill-height>
+                                     <v-flex xs12 align-end flexbox>
+                                     <span class="headline">Adresse</span>
+                                     </v-flex>
+                                 </v-layout>
+                             </v-container>
+                         </v-img>
+                         <v-card-title>
+                                <div>
+                                    <span class="grey--text">28, La renaudière</span><br>
+                                    <span>85150 Sainte flaive des loups</span><br>
+                                    <span>Vendée</span>
+                                 </div>
+                             </v-card-title>                            
+                         </v-card>
                   </v-col>
                             <!-- LANGUES -->
                   <v-col cols="12" md="4">
@@ -65,13 +93,13 @@
                           </div>
                       </div> 
                             <!-- COMPETENCES -->
-                      <div v-for="(group, index) in competencesGroup" :key="index">
+                      <div v-for="(group, i) in competencesGroup" :key="i">
                           <div class="sub-heading mt-8">
                           <span>{{group.name}}</span>
                           <span class="sub-heading-icon"><v-icon color="#fff">{{group.icon}}</v-icon></span>
                       </div>
                       <div class="skill-wrapper" v-if="group.Competences">
-                          <div class="skill-item" v-for="(Competence, index) in group.Competences" :key="index+300">
+                          <div class="skill-item" v-for="(Competence, i) in group.Competences" :key="i+300">
                           <div class="skill-name mt-8">{{Competence.name}}</div>
                          <v-progress-linear :value="Competence.percent_completed" width="8"></v-progress-linear>
                         </div>
@@ -87,10 +115,10 @@
 export default {
     data(){
         return{
-            
+            codeImage: require("../assets/pccodevue.jpg"),
             Experiences:[
                 {
-                    id: 1,
+                    id: 44,
                     designation: "YOUTUBE",
                     company: "TUTO DEVELOPPEUR MAISON", 
                     description: "Création de tutoriels afin de consolider mon aisance orale et technique",
@@ -98,7 +126,7 @@ export default {
                 },
                 
                 {
-                    id: 2,
+                    id: 45,
                     designation: "STAGE",
                     company: "FBO LA ROCHE SUR YON",
                     description:"STAGE EN ENTREPRISE CONCEPTION D'UNE APPLICATION JAVAGOOGLE VISION OCR.Recherche et compréhension de la base de données relationnelles. Utilisation de spring boot pour effectuer les GET. Organisation autour du logiciel TRELLO et application de la méthode SCRUM AGILE tout au long du stage.",
@@ -106,7 +134,7 @@ export default {
                 },
 
                 {
-                    id: 3,
+                    id: 46,
                     designation: "CROUPIER", 
                     company: "JOA CASINO DES PINS LES SABLES D'OLONNE", 
                     description: "Animer les tables de jeux",
@@ -114,7 +142,7 @@ export default {
                 },
 
                 {
-                    id: 4,
+                    id: 47,
                     designation: "COMMIS AUX VIVRES",
                     company: "MARINE NATIONALE FRANCE",  
                     description: "Gestionnaire de collectivité au sein de la Marine nationale.",
@@ -145,59 +173,77 @@ export default {
                     date: " De janvier 2000 à janvier 2001."
                 }
             ],
-                     Hobby: [
+            Hobby: [
                 {
-                    id: 1,
+                    id: 4,
                     titre: "Création de site web",
                 },
                 {
-                    id: 2,
+                    id: 5,
                     titre: "Unity 3B jeux",     
                 },
                 {
-                    id: 3,
+                    id: 6,
                     titre: "Tutoriels Udemy",   
                 },
                 {
-                    id: 4,
+                    id: 7,
                     titre: "Blockchain etheréum",   
+                },
+                {
+                    id: 8,
+                    titre: "Cryptomonnaies",   
+                },
+            ],
+             Loisir: [
+                {
+                    id: 9,
+                    titre: "Guitariste amateur",
+                },
+                {
+                    id: 10,
+                    titre: "Jardinage",     
+                },
+                {
+                    id: 11,
+                    titre: "Bricolage",   
                 },
             ],
             langues:[
                 {
-                    id: 1,
+                    id: 12,
                     name: "Français",
                     percent_completed: 90 
                 },
                 {
-                    id: 2,
+                    id: 13,
                     name: "Anglais",
                     percent_completed: 55
                 },
             ],
             competencesGroup:[
                 {
-                    id: 1,
+                    id: 14,
                     name: "Langages",
                     icon: "mdi-developer-board",
                     Competences:[
                         {
-                            id: 1,
+                            id: 15,
                             name: "HTML",
                             percent_completed: 60
                         },
                         {
-                            id: 2,
+                            id: 16,
                             name: "CSS",
                             percent_completed: 55
                         },
                         {
-                            id: 3,
+                            id: 17,
                             name: "JAVASCRIPT",
                             percent_completed: 40
                         },
                         {
-                            id: 4,
+                            id: 18,
                             name: "HANDLEBARS",
                             percent_completed: 30
                         }
@@ -205,137 +251,137 @@ export default {
                     ]
                 },
                 {
-                    id: 2,
+                    id: 19,
                     name: "Frameworks",
                     icon: "mdi-electron-framework",
                     Competences:[
                         {
-                            id: 1,
+                            id: 20,
                             name: "WORDPRESS",
                             percent_completed: 55
                         },
                         {
-                            id: 2,
+                            id: 21,
                             name: "BOOTSTRAP",
                             percent_completed: 55
                         },
                         {
-                            id: 3,
+                            id: 22,
                             name: "EXPRESS",
                             percent_completed: 60
                         },
                         {
-                            id: 4,
+                            id: 23,
                             name: "VUEJS",
                             percent_completed: 30
                         }
                     ]
                 },
                 {
-                    id: 3,
+                    id: 24,
                     name: "BACK-END",
                     icon: "mdi-server",
                     Competences:[
                         {
-                            id: 1,
+                            id: 25,
                             name: "NODEJS",
                             percent_completed: 40
                         },
                         {
-                            id: 2,
+                            id: 26,
                             name: "MONGODB",
                             percent_completed: 30
                         },
                         {
-                            id: 3,
+                            id: 27,
                             name: "SERVER OVH",
                             percent_completed: 60
                         },
                         {
-                            id: 4,
+                            id: 28,
                             name: "SERVEUR LINUX",
                             percent_completed: 55
                         },
                     ]
                 },
                 {
-                    id: 4,
+                    id: 29,
                     name: "OS",
                     icon: "mdi-disc",
                     Competences:[
                         {
-                            id: 1,
+                            id: 30,
                             name: "LINUX",
                             percent_completed: 40
                         },
                         {
-                            id: 2,
+                            id: 31,
                             name: "WINDOWS",
                             percent_completed: 50
                         },
                     ]
                 },
                 {
-                    id: 5,
+                    id: 32,
                     name: "LOGICIELS",
                     icon: "mdi-loading",
                     Competences:[
                         {
-                            id: 1,
+                            id: 33,
                             name: "VISUAL CODE STUDIO",
                             percent_completed: 55
                         },
                         {
-                            id: 2,
+                            id: 34,
                             name: "GITHUB",
                             percent_completed: 45
                         },
                         {
-                            id: 3,
+                            id: 35,
                             name: "TRELLO",
                             percent_completed: 40
                         },
                         {
-                            id: 4,
+                            id: 36,
                             name: "WORDPRESS",
                             percent_completed: 40
                         },
                     ]
                 },
                 {
-                    id: 6,
+                    id: 37,
                     name: "RESEAU",
                     icon: "mdi-link",
                     Competences:[
                         {
-                            id: 1,
+                            id: 38,
                             name: "LAMP",
                             percent_completed: 70
                         },
                         {
-                            id: 2,
+                            id: 39,
                             name: "XAMP",
                             percent_completed: 70
                         },
                         {
-                            id: 3,
+                            id: 40,
                             name: "OVH",
                             percent_completed: 50
                         },
                     ]       
                 },
                 {
-                    id:7,
+                    id: 41,
                     name: "MATERIEL",
                     icon: "mdi-material-design",
                     Competences:[
                         {
-                            id: 1,
+                            id: 42,
                             name: "MONTAGE PC HARDWARE",
                             percent_completed: 80
                         },
                         {
-                            id: 2,
+                            id: 43,
                             name: "INSTALLATION SOFTWARE",
                             percent_completed: 80
                         },
