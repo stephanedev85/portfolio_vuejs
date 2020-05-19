@@ -23,7 +23,7 @@
                 <v-img class="img" v-bind:src="profileImage"></v-img>
               </v-col>
               <v-col cols=12 md="4">
-                <h3 class="headline text-center">Je suis à la recherche d'un contrat de professionnalisation en vue de préparer le diplôme de concepteur développeur d'applications.</h3>
+                <h3 class="headline text-justified">Je suis à la recherche d'un contrat de professionnalisation en vue de préparer le diplôme de concepteur développeur d'applications.</h3>
                 <br>
                 <p>J'ai des connaissances dans les domaines suivants: html, css, javascript, nodejs, bootstrap, bulma, mongodb, wordpress, et tout récemment vueJS et react</p>
                 <p>J'ai créé quelques sites vitrine et blogs wordpress.</p>
