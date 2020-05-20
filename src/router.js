@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Cv from './portfolio/Cv.vue'
 import Contact from './portfolio/Contact.vue'
-import Commentaires from './portfolio/Commentaires.vue'
+import Projet from './portfolio/Projet.vue'
 
 Vue.use(VueRouter)
 
@@ -13,8 +13,8 @@ const routes = [
 
    },
    {
-        path: '/Commentaires',
-        component: Commentaires
+        path: '/Projet',
+        component: Projet
 
    },
    {

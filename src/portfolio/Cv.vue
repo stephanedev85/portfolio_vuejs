@@ -72,12 +72,12 @@
                              </v-container>
                          </v-img>
                          <v-card-title>
-                                <div>
-                                    <span class="grey--text">28, La renaudière</span><br>
+                                 <div>
+                                    <span>28, La renaudière</span><br>
                                     <span>85150 Sainte flaive des loups</span><br>
                                     <span>Vendée</span>
                                  </div>
-                             </v-card-title>                            
+                        </v-card-title>                            
                          </v-card>
                   </v-col>
                             <!-- LANGUES -->
@@ -118,7 +118,7 @@ export default {
             codeImage: require("../assets/pccodevue.jpg"),
             Experiences:[
                 {
-                    id: 44,
+                    id: 1,
                     designation: "YOUTUBE",
                     company: "TUTO DEVELOPPEUR MAISON", 
                     description: "Création de tutoriels afin de consolider mon aisance orale et technique",
@@ -126,7 +126,7 @@ export default {
                 },
                 
                 {
-                    id: 45,
+                    id: 2,
                     designation: "STAGE",
                     company: "FBO LA ROCHE SUR YON",
                     description:"STAGE EN ENTREPRISE CONCEPTION D'UNE APPLICATION JAVAGOOGLE VISION OCR.Recherche et compréhension de la base de données relationnelles. Utilisation de spring boot pour effectuer les GET. Organisation autour du logiciel TRELLO et application de la méthode SCRUM AGILE tout au long du stage.",
@@ -134,7 +134,7 @@ export default {
                 },
 
                 {
-                    id: 46,
+                    id: 3,
                     designation: "CROUPIER", 
                     company: "JOA CASINO DES PINS LES SABLES D'OLONNE", 
                     description: "Animer les tables de jeux",
@@ -142,7 +142,7 @@ export default {
                 },
 
                 {
-                    id: 47,
+                    id: 4,
                     designation: "COMMIS AUX VIVRES",
                     company: "MARINE NATIONALE FRANCE",  
                     description: "Gestionnaire de collectivité au sein de la Marine nationale.",
@@ -152,21 +152,21 @@ export default {
             ],
             Diplomes: [
                 {
-                    id: 1,
+                    id: 5,
                     titre: "DÉVELOPPEUR WEB ET MOBILE.",
                     lieu: "ARINFO LA ROCHE SUR YON.",
                     certificat: "DÉVELOPPEUR WEB ET MOBILE - BAC+2 (BTS, DUT OU ÉQUIVALENTS)-PROGRAMMATION WEB.",
                     date: "De février 2019 à septembre 2019."
                 },
                 {
-                    id: 2,
+                    id: 6,
                     titre: "CROUPIER.",
                     lieu: "CERUS ACADEMY PARIS 20 EME.",
                     certificat: "DIPLÔME DE CROUPIER (BAC PROFESSIONNEL).",
                     date: "De janvier 2008 à juin 2008."
                 },
                 {
-                    id: 3,
+                    id: 7,
                     titre: "COMMIS AUX VIVRES",
                     lieu: "ÉCOLE DES FOURRIERS ROCHEFORT SUR MER.",
                     certificat: "BAT MARINE NATIONALE.",
@@ -175,75 +175,75 @@ export default {
             ],
             Hobby: [
                 {
-                    id: 4,
+                    id: 8,
                     titre: "Création de site web",
                 },
                 {
-                    id: 5,
+                    id: 9,
                     titre: "Unity 3B jeux",     
                 },
                 {
-                    id: 6,
+                    id: 10,
                     titre: "Tutoriels Udemy",   
                 },
                 {
-                    id: 7,
+                    id: 11,
                     titre: "Blockchain etheréum",   
                 },
                 {
-                    id: 8,
+                    id: 12,
                     titre: "Cryptomonnaies",   
                 },
             ],
              Loisir: [
                 {
-                    id: 9,
+                    id: 13,
                     titre: "Guitariste amateur",
                 },
                 {
-                    id: 10,
+                    id: 14,
                     titre: "Jardinage",     
                 },
                 {
-                    id: 11,
+                    id: 15,
                     titre: "Bricolage",   
                 },
             ],
             langues:[
                 {
-                    id: 12,
+                    id: 16,
                     name: "Français",
                     percent_completed: 90 
                 },
                 {
-                    id: 13,
+                    id: 16,
                     name: "Anglais",
                     percent_completed: 55
                 },
             ],
             competencesGroup:[
                 {
-                    id: 14,
+                    id: 17,
                     name: "Langages",
                     icon: "mdi-developer-board",
                     Competences:[
                         {
-                            id: 15,
+                            id: 18,
                             name: "HTML",
                             percent_completed: 60
                         },
                         {
-                            id: 16,
+                            id: 19,
                             name: "CSS",
                             percent_completed: 55
                         },
                         {
-                            id: 17,
+                            id: 20,
                             name: "JAVASCRIPT",
                             percent_completed: 40
                         },
                         {
-                            id: 18,
+                            id: 21,
                             name: "HANDLEBARS",
                             percent_completed: 30
                         }
@@ -251,137 +251,137 @@ export default {
                     ]
                 },
                 {
-                    id: 19,
+                    id: 22,
                     name: "Frameworks",
                     icon: "mdi-electron-framework",
                     Competences:[
                         {
-                            id: 20,
+                            id: 23,
                             name: "WORDPRESS",
                             percent_completed: 55
                         },
                         {
-                            id: 21,
+                            id: 24,
                             name: "BOOTSTRAP",
                             percent_completed: 55
                         },
                         {
-                            id: 22,
+                            id: 25,
                             name: "EXPRESS",
                             percent_completed: 60
                         },
                         {
-                            id: 23,
+                            id: 26,
                             name: "VUEJS",
                             percent_completed: 30
                         }
                     ]
                 },
                 {
-                    id: 24,
+                    id: 27,
                     name: "BACK-END",
                     icon: "mdi-server",
                     Competences:[
                         {
-                            id: 25,
+                            id: 28,
                             name: "NODEJS",
                             percent_completed: 40
                         },
                         {
-                            id: 26,
+                            id: 29,
                             name: "MONGODB",
                             percent_completed: 30
                         },
                         {
-                            id: 27,
+                            id: 30,
                             name: "SERVER OVH",
                             percent_completed: 60
                         },
                         {
-                            id: 28,
+                            id: 31,
                             name: "SERVEUR LINUX",
                             percent_completed: 55
                         },
                     ]
                 },
                 {
-                    id: 29,
+                    id: 32,
                     name: "OS",
                     icon: "mdi-disc",
                     Competences:[
                         {
-                            id: 30,
+                            id: 33,
                             name: "LINUX",
                             percent_completed: 40
                         },
                         {
-                            id: 31,
+                            id: 34,
                             name: "WINDOWS",
                             percent_completed: 50
                         },
                     ]
                 },
                 {
-                    id: 32,
+                    id: 35,
                     name: "LOGICIELS",
                     icon: "mdi-loading",
                     Competences:[
                         {
-                            id: 33,
+                            id: 36,
                             name: "VISUAL CODE STUDIO",
                             percent_completed: 55
                         },
                         {
-                            id: 34,
+                            id: 37,
                             name: "GITHUB",
                             percent_completed: 45
                         },
                         {
-                            id: 35,
+                            id: 38,
                             name: "TRELLO",
                             percent_completed: 40
                         },
                         {
-                            id: 36,
+                            id: 39,
                             name: "WORDPRESS",
                             percent_completed: 40
                         },
                     ]
                 },
                 {
-                    id: 37,
+                    id: 40,
                     name: "RESEAU",
                     icon: "mdi-link",
                     Competences:[
                         {
-                            id: 38,
+                            id: 41,
                             name: "LAMP",
                             percent_completed: 70
                         },
                         {
-                            id: 39,
+                            id: 42,
                             name: "XAMP",
                             percent_completed: 70
                         },
                         {
-                            id: 40,
+                            id: 43,
                             name: "OVH",
                             percent_completed: 50
                         },
                     ]       
                 },
                 {
-                    id: 41,
+                    id: 44,
                     name: "MATERIEL",
                     icon: "mdi-material-design",
                     Competences:[
                         {
-                            id: 42,
+                            id: 45,
                             name: "MONTAGE PC HARDWARE",
                             percent_completed: 80
                         },
                         {
-                            id: 43,
+                            id: 46,
                             name: "INSTALLATION SOFTWARE",
                             percent_completed: 80
                         },
