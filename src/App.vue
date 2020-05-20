@@ -42,11 +42,28 @@
             </v-row>
           </v-card-text>
           <v-card-actions class="elevation-0">
+            
             <v-toolbar-items>
-              <v-btn color="secondary" text>À propos</v-btn>
-              <v-btn color="secondary" text to="/">CV</v-btn>
-              <v-btn color="secondary" text to="/Projet">Mes projets</v-btn>
-              <v-btn color="secondary" text to="/Contact">Contact</v-btn>
+              <v-container>
+                <v-row>
+                 
+                    <v-btn color="secondary" text>À propos</v-btn>
+                  
+                  
+                    <v-btn color="secondary" text to="/">CV</v-btn>
+                  
+                 
+                    <v-btn color="secondary" text to="/Projet">Mes projets</v-btn>
+                  
+                  
+                    <v-btn color="secondary" text to="/Contact">Contact</v-btn>
+                
+              
+              
+              
+              
+                </v-row>
+              </v-container>
             </v-toolbar-items>
           </v-card-actions>
         </v-card>
@@ -98,7 +115,7 @@
 
   }
 </script>
-/* LES STYLES */
+ <!-- LES STYLES --> 
 <style>
   .heading {
     background-color: #414141;
