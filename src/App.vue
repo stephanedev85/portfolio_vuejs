@@ -17,7 +17,7 @@
           <v-card-text>
             <v-row>
               <v-col col="12">
-                <v-span class="heading">À propos de moi</v-span>
+                <span class="heading">À propos de moi</span>
               </v-col>
             </v-row>
             <v-row>
@@ -42,26 +42,13 @@
             </v-row>
           </v-card-text>
           <v-card-actions class="elevation-0">
-            
             <v-toolbar-items>
               <v-container>
                 <v-row>
-                 
-                    <v-btn color="secondary" text>À propos</v-btn>
-                  
-                  
-                    <v-btn color="secondary" text to="/">CV</v-btn>
-                  
-                 
-                    <v-btn color="secondary" text to="/Projet">Mes projets</v-btn>
-                  
-                  
-                    <v-btn color="secondary" text to="/Contact">Contact</v-btn>
-                
-              
-              
-              
-              
+                  <v-btn color="secondary" text>À propos</v-btn>
+                  <v-btn color="secondary" text to="/">CV</v-btn>
+                  <v-btn color="secondary" text to="/Projet">Mes projets</v-btn>
+                  <v-btn color="secondary" text to="/Contact">Contact</v-btn>
                 </v-row>
               </v-container>
             </v-toolbar-items>
@@ -70,21 +57,21 @@
         <router-view></router-view>
       </v-content>
       <v-footer class="pa-3">
-        <div>&copy; {{ new Date().getFullYear() }}</div>
+        <div>&copy; {{ new Date().getFullYear() }} Desmaretz stéphane.</div>
       </v-footer>
     </v-container>
   </v-app>
 </template>
 
 <script>
+ import VueRecaptcha from 'vue-recaptcha';
   export default {
     name: 'App',
 
     data() {
       return {
         profileImage: require('./assets/penguin.png'),
-        socialLink: [
-          {
+        socialLink: [{
             id: 1,
             icon: 'mdi-twitter',
             url: '//twitter.com/WendyMa64422957',
@@ -108,14 +95,13 @@
             url: '//github.com/stephanedev85',
             name: 'Github'
           }
-        ]
+        ],
 
       }
-    }
-
+    },
   }
 </script>
- <!-- LES STYLES --> 
+<!-- LES STYLES -->
 <style>
   .heading {
     background-color: #414141;

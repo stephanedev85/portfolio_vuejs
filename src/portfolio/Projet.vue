@@ -3,7 +3,7 @@
     <v-card>
       <v-row  class="mt-4">
         <v-col col="12">
-          <v-span class="heading">Projets</v-span>
+          <span class="heading">Projets</span>
         </v-col>
       </v-row>
       <v-row  class="mt-4">

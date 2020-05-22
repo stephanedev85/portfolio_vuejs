@@ -4,7 +4,7 @@
            <v-card-text>
                <v-row>
                     <v-col col="12">
-                        <v-span class="heading">Curriculum Vitae</v-span>
+                        <span class="heading">Curriculum Vitae</span>
                     </v-col>
               </v-row>
               <v-row>
@@ -12,7 +12,7 @@
                   <v-col cols="12" md="8">
                       <div class="sub-heading mt-4">
                           <span>Expériences professionnelles</span>
-                          <span class="sub-heading-icon"><v-icon class="white--text">mdi-worker</v-icon></span>
+                          <span class="sub-heading-icon"><v-icon class="white--text">mdi-notebook</v-icon></span>
                       </div>
                       <div class="resume-item" v-for="(experience, p) in Experiences" :key="p">
                           <div class="resume-item-heading">
@@ -138,7 +138,7 @@ export default {
                     designation: "CROUPIER", 
                     company: "JOA CASINO DES PINS LES SABLES D'OLONNE", 
                     description: "Animer les tables de jeux",
-                    date: "De février 2008 à juillet 2018"
+                    date: "2008 à 2018"
                 },
 
                 {
@@ -146,31 +146,31 @@ export default {
                     designation: "COMMIS AUX VIVRES",
                     company: "MARINE NATIONALE FRANCE",  
                     description: "Gestionnaire de collectivité au sein de la Marine nationale.",
-                    date: "De septembre 1997 à septembre 2007"
+                    date: "1997 à  2007"
                 },
 
             ],
             Diplomes: [
                 {
                     id: 5,
-                    titre: "DÉVELOPPEUR WEB ET MOBILE.",
+                    titre: "DÉVELOPPEUR WEB.",
                     lieu: "ARINFO LA ROCHE SUR YON.",
                     certificat: "DÉVELOPPEUR WEB ET MOBILE - BAC+2 (BTS, DUT OU ÉQUIVALENTS)-PROGRAMMATION WEB.",
-                    date: "De février 2019 à septembre 2019."
+                    date: "2019 à 2019."
                 },
                 {
                     id: 6,
                     titre: "CROUPIER.",
                     lieu: "CERUS ACADEMY PARIS 20 EME.",
                     certificat: "DIPLÔME DE CROUPIER (BAC PROFESSIONNEL).",
-                    date: "De janvier 2008 à juin 2008."
+                    date: "2008 à 2008."
                 },
                 {
                     id: 7,
                     titre: "COMMIS AUX VIVRES",
                     lieu: "ÉCOLE DES FOURRIERS ROCHEFORT SUR MER.",
                     certificat: "BAT MARINE NATIONALE.",
-                    date: " De janvier 2000 à janvier 2001."
+                    date: "2000 à 2001."
                 }
             ],
             Hobby: [
@@ -180,7 +180,7 @@ export default {
                 },
                 {
                     id: 9,
-                    titre: "Unity 3B jeux",     
+                    titre: "Unity3D jeux",     
                 },
                 {
                     id: 10,
@@ -188,7 +188,7 @@ export default {
                 },
                 {
                     id: 11,
-                    titre: "Blockchain etheréum",   
+                    titre: "Blockchain ethéréum",   
                 },
                 {
                     id: 12,

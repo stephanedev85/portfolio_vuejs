@@ -42,7 +42,7 @@ app.post('/sendmail', async (req,res,)=>{
       from:  req.body.Email, // sender address
       to: "stephaneweb@orange.fr", // list of receivers
       subject: req.body.Sujet, // Subject line
-      text: req.body.Message, // plain text body
+      tel: req.body.phone, // plain text body
       html: "<b>"+req.body.Message+"</b>", // html body
     });
   
