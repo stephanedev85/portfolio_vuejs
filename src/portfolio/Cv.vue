@@ -4,7 +4,7 @@
 		<v-card tile class="md-1">
 			<v-card-text>
 				<v-row>
-					<v-col col="12">
+					<v-col cols="12">
 						<span class="heading">Curriculum Vitae</span>
 					</v-col>
 				</v-row>
@@ -20,16 +20,16 @@
 								<v-container fill-height fluid>
 									<v-layout fill-height>
 										<v-flex xs12 align-end flexbox>
-											<span class="headline">Adresse</span>
+											<span class="headline"></span>
 										</v-flex>
 									</v-layout>
 								</v-container>
 							</v-img>
 							<v-card-title>
 								<div>
-									<span>28, La renaudière</span>
+									<span>28, La renaudière 85150</span>
 									<br />
-									<span>85150 Sainte flaive des loups</span>
+									<span>Sainte flaive des loups</span>
 									<br />
 									<span>Vendée</span>
 								</div>
@@ -294,5 +294,8 @@
 
 	.bb {
 		border-bottom: 1px inset #313131;
+	}
+	.black--text{
+		opacity: 0.7;
 	}
 </style>

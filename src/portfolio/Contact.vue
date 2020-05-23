@@ -20,7 +20,7 @@
                                     <vue-tel-input class="Mobile" type="number" v-model="phone"
                                         outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
-                                    ]" label="phone" aria-placeholder="téléphone (optionnel)"></vue-tel-input>
+                                    ]" label="phone" placeholder="téléphone (optionnel)"></vue-tel-input>
                                 </v-col>
                             </v-row>
 
@@ -47,8 +47,8 @@
                                     <div>
                                         <v-row>
                                             <v-col cols="12" align="right">
-                                                <!-- <vue-recaptcha sitekey= process.env.KEY_CAPTCHA
-                                                    :loadRecaptchaScript="true"></vue-recaptcha> -->
+                                                 <vue-recaptcha sitekey= process.env.KEY_CAPTCHA
+                                                    :loadRecaptchaScript="true"></vue-recaptcha> 
                                             </v-col>
                                         </v-row>
                                     </div>
@@ -91,7 +91,7 @@
 </template>
 <script>
     import axios from 'axios'
-    // import VueRecaptcha from 'vue-recaptcha'
+    import VueRecaptcha from 'vue-recaptcha'
     export default {
         data() {
             return {
@@ -132,7 +132,7 @@
             }
         },
         components: {
-            // VueRecaptcha
+             VueRecaptcha
         }
     }
 </script>

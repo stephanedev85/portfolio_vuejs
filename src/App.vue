@@ -25,6 +25,8 @@
                 <v-img class="img" v-bind:src="profileImage"></v-img>
               </v-col>
               <v-col cols=12 md="4">
+                <h2 class="moi">À propos de moi</h2>
+                <br>
                 <h3 class="headline-text-justified">Je suis à la recherche d'un contrat de professionnalisation en vue
                   de préparer le diplôme de concepteur développeur d'applications.</h3>
                 <br>
@@ -34,10 +36,10 @@
                 <p>Je m'intéresse à la blockchain etheréum.</p>
               </v-col>
               <v-col cols=12 md="5">
-                <div class="my-attr"><span>Nom </span> Desmaretz stéphane</div>
+                <div class="my-attr"><span>Nom  </span> Desmaretz stéphane</div>
                 <div class="my-attr"><span>Age </span> 43 ans </div>
-                <div class="my-attr"><span>adresse </span> Sainte-flaive des loups</div>
-                <div class="my-attr"><span>Email </span>stephaneweb@orange.fr</div>
+                <div class="my-attr"><span>Adresse </span> Sainte-flaive des loups</div>
+                <div class="my-attr"><span>Email </span> stephaneweb@orange.fr</div>
               </v-col>
             </v-row>
           </v-card-text>
@@ -88,7 +90,7 @@
           {
             id: 47,
             icon: 'mdi-linkedin',
-            url: '//www.linkedin.com/feed/',
+            url: '//www.linkedin.com/in/stephane-desmaretz-53a510196/',
             name: 'Linkedin'
           },
           {
@@ -111,22 +113,28 @@
     padding: 10px 5px;
     font-size: 18px;
     border-radius: 10px 0px;
+    margin-left: 5px;
   }
 
   .img {
     width: 50%;
+    margin-left: 70px;
   }
 
   .my-attr {
-    padding: 10px;
-    margin: 5px 10px;
+    padding: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+  
   }
 
   .my-attr>span {
+    display: inline-block;
+    width: 15%;
     background-color: #414141;
     color: #fff;
     padding: 10px;
-    margin-right: 15px;
+    margin-left: 15px;
     border-radius: 10px 0px;
   }
 
@@ -141,5 +149,10 @@
 
   .back-grey {
     background-color: #ccc;
+  }
+  .moi{
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
   }
 </style>
