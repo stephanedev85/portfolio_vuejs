@@ -47,8 +47,8 @@
                                     <div>
                                         <v-row>
                                             <v-col cols="12" align="right">
-                                                <vue-recaptcha sitekey= process.env.KEY_CAPTCHA
-                                                    :loadRecaptchaScript="true"></vue-recaptcha>
+                                                <!-- <vue-recaptcha sitekey= process.env.KEY_CAPTCHA
+                                                    :loadRecaptchaScript="true"></vue-recaptcha> -->
                                             </v-col>
                                         </v-row>
                                     </div>
@@ -91,7 +91,7 @@
 </template>
 <script>
     import axios from 'axios'
-    import VueRecaptcha from 'vue-recaptcha'
+    // import VueRecaptcha from 'vue-recaptcha'
     export default {
         data() {
             return {
@@ -132,7 +132,7 @@
             }
         },
         components: {
-            VueRecaptcha
+            // VueRecaptcha
         }
     }
 </script>

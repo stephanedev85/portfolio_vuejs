@@ -54,8 +54,10 @@
             </v-toolbar-items>
           </v-card-actions>
         </v-card>
-        <router-view></router-view>
       </v-content>
+
+      <router-view></router-view>
+
       <v-footer class="pa-3">
         <div>&copy; {{ new Date().getFullYear() }} Desmaretz stéphane.</div>
       </v-footer>
@@ -64,7 +66,7 @@
 </template>
 
 <script>
- import VueRecaptcha from 'vue-recaptcha';
+//  import VueRecaptcha from 'vue-recaptcha';
   export default {
     name: 'App',
 
@@ -72,25 +74,25 @@
       return {
         profileImage: require('./assets/penguin.png'),
         socialLink: [{
-            id: 1,
+            id: 45,
             icon: 'mdi-twitter',
             url: '//twitter.com/WendyMa64422957',
             name: 'facebook'
           },
           {
-            id: 2,
+            id: 46,
             icon: 'mdi-youtube',
             url: '//www.youtube.com/channel/UCgNVngS9U_xtQHpYflBrVXg?view_as=subscriber',
             name: 'Youtube'
           },
           {
-            id: 3,
+            id: 47,
             icon: 'mdi-linkedin',
             url: '//www.linkedin.com/feed/',
             name: 'Linkedin'
           },
           {
-            id: 4,
+            id: 48,
             icon: 'mdi-git',
             url: '//github.com/stephanedev85',
             name: 'Github'

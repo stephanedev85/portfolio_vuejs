@@ -1,15 +1,30 @@
+/*
+ * Welcome to my first api nodejs with VueJS in Front-End
+ *
+ * ********************************************************/
+
+// Import Module
 require('dotenv').config();
 const express = require('express');
-const nodemailer = require('nodemailer')
 const app = express();
 const cors = require('cors');
-var https = require('https');
+const https = require('https');
+const port = 3000;
+const nodemailer = require('nodemailer');
+
+
+// Use Module
 app.use(cors());
 app.use(express.json());
 
+// Log process.env
+// console.log(process.env)
 
-// ROUTES
+/*
+ * Routes
+ * ******/
 
+// Home
 app.get("/", (req,res,)=>{
     return res.json({
         status: 'server',
@@ -17,8 +32,7 @@ app.get("/", (req,res,)=>{
     })
 })
 
-
-
+// Nodemailer Post
 app.post('/sendmail', async (req,res,)=>{
     
     https.globalAgent.options.secureProtocol = 'SSLv3_method';
@@ -54,9 +68,7 @@ app.post('/sendmail', async (req,res,)=>{
     
     
 })
-const port = 3000;
+
 app.listen(port || process.env.port, ()=>{
     console.log("le serveur tourne sur le port 3000"); 
 });
-
-
