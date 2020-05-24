@@ -26,17 +26,18 @@ app.post("/sendmail", async (req,res) =>{
           user: process.env.USER_MAIL , // generated ethereal user
           pass: process.env.USER_PASS, // generated ethereal password
         },
-      });
+    });
     
-      // send mail with defined transport object
-      let info = await transporter.sendMail({
+    // send mail with defined transport object
+    let info = await transporter.sendMail({
         from: req.body.Email, // sender address
         to: "stephanedev85@gmail.com", // list of receivers
         subject: req.body.Sujet, // Subject line
-         // plain text body
+        // plain text body
         html: "<b>"+ req.body.Nom + "<br>" + req.body.Message +  "</b>", // html body
-      });
-
+    });
+    
+   
     
     return res.json({
         status: 'ok',

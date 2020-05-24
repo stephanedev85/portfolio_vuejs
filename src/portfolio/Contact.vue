@@ -8,7 +8,7 @@
 
                 <v-row>
                     <v-col cols="12" md="8">
-                        <v-form ref="contactForm">
+                        <v-form ref="contactForm" v-on:submit="submitForm">
 
                             <v-row>
                                 <v-col cols="12" md="6">
@@ -17,7 +17,7 @@
                                     ]" label="Email"></v-text-field>
                                 </v-col>
                                 <v-col cols="12" md="6">
-                                     <v-text-field v-model="Nom" outlined :rules="[
+                                    <v-text-field v-model="Nom" outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
                                     ]" label="Nom"></v-text-field>
                                 </v-col>
@@ -42,6 +42,7 @@
                             <v-row>
                                 <v-col cols="12" align="right">
                                     <v-btn color="primary" tile @click="sendMessage">Envoyer</v-btn>
+
                                 </v-col>
                             </v-row>
                         </v-form>
@@ -71,6 +72,7 @@
 <script>
     import axios from 'axios'
 
+
     export default {
         data() {
             return {
@@ -79,8 +81,10 @@
                 Nom: '',
                 Sujet: '',
                 Message: '',
+
             }
         },
+
         methods: {
             sendMessage() {
                 if (!this.$refs.contactForm.validate()) return
@@ -91,9 +95,11 @@
                     Sujet: this.Sujet,
                     Message: this.Message,
 
+
                 }
                 axios.post('http://localhost:4000/sendmail', userInput)
                     .then(response => {
+                           this.$refs.contactForm.reset();
                         console.log(response.data);
 
                     })
