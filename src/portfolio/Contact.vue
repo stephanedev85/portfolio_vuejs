@@ -17,10 +17,9 @@
                                     ]" label="Email"></v-text-field>
                                 </v-col>
                                 <v-col cols="12" md="6">
-                                    <vue-tel-input class="Mobile" type="number" v-model="phone"
-                                        outlined :rules="[
+                                     <v-text-field v-model="Nom" outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
-                                    ]" label="phone" placeholder="téléphone (optionnel)"></vue-tel-input>
+                                    ]" label="Nom"></v-text-field>
                                 </v-col>
                             </v-row>
 
@@ -34,8 +33,7 @@
 
                             <v-row>
                                 <v-col cols="12">
-                                    <v-textarea label="Votre message" v-model="Message" outlined
-                                        :rules="[
+                                    <v-textarea label="Votre message" v-model="Message" outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
                                     ]"></v-textarea>
                                 </v-col>
@@ -44,15 +42,6 @@
                             <v-row>
                                 <v-col cols="12" align="right">
                                     <v-btn color="primary" tile @click="sendMessage">Envoyer</v-btn>
-                                    <div>
-                                        <v-row>
-                                            <v-col cols="12" align="right">
-                                                 <vue-recaptcha sitekey= process.env.KEY_CAPTCHA
-                                                    :loadRecaptchaScript="true"></vue-recaptcha> 
-                                            </v-col>
-                                        </v-row>
-                                    </div>
-
                                 </v-col>
                             </v-row>
                         </v-form>
@@ -74,16 +63,6 @@
 
                     </v-col>
                 </v-row>
-
-                <v-row>
-                    <v-col cols="12">
-                        <GmapMap :center="center" :zoom="7" map-type-id="terrain" style="width: 100%; height: 400px">
-                            <GmapMarker :position="center" :clickable="true" :draggable="true" @click="center" />
-                        </GmapMap>
-                    </v-col>
-                </v-row>
-
-
             </v-card-text>
         </v-card>
     </div>
@@ -91,22 +70,15 @@
 </template>
 <script>
     import axios from 'axios'
-    import VueRecaptcha from 'vue-recaptcha'
+
     export default {
         data() {
             return {
-              
+
                 Email: '',
-                reg: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/,
-                phone: '',
+                Nom: '',
                 Sujet: '',
                 Message: '',
-
-                center: {
-                    lat: 46.6167,
-                    lng: -1.579
-                }
-
             }
         },
         methods: {
@@ -115,12 +87,12 @@
 
                 let userInput = {
                     Email: this.Email,
-                    phone: this.phone,
+                    Nom: this.Nom,
                     Sujet: this.Sujet,
                     Message: this.Message,
 
                 }
-                axios.post('http://localhost:3000/sendmail', userInput)
+                axios.post('http://localhost:4000/sendmail', userInput)
                     .then(response => {
                         console.log(response.data);
 
@@ -131,9 +103,7 @@
                     })
             }
         },
-        components: {
-             VueRecaptcha
-        }
+
     }
 </script>
 <style>
