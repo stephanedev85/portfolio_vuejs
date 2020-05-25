@@ -42,7 +42,7 @@
                             <v-row>
                                 <v-col cols="12" align="right">
                                     <v-btn color="primary" tile @click="sendMessage">Envoyer</v-btn>
-
+                                    <flash-message class="Success"></flash-message>
                                 </v-col>
                             </v-row>
                         </v-form>
@@ -94,6 +94,7 @@
                     axios.post('http://localhost:4000/sendmail', userInput)
                         .then(response => {
                                this.$refs.contactForm.reset();
+                               this.flash('Email envoyé', 'success');
                             console.log(response.data);
                         })
                         .catch(error => {
@@ -116,5 +117,16 @@
     }
     .Mobile {
         height: 55px;
+    }
+    .success{
+        width: 50%;
+        margin-top: 10px;
+        margin-right: 100px;
+        color: #fff;
+        box-shadow: 5px 5px #ccc;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 15px;
     }
 </style>
