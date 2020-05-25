@@ -12,12 +12,12 @@
 
                             <v-row>
                                 <v-col cols="12" md="6">
-                                    <v-text-field v-model="Email" outlined :rules="[
-                                    (v)=> !!v || 'Ce champs est requis.'
+                                    <v-text-field :maxlength="max" v-model="Email" outlined :rules="[
+                                    (v)=> (v || '').match(/@/) || ' !! Entrez un email valide !!'
                                     ]" label="Email"></v-text-field>
                                 </v-col>
                                 <v-col cols="12" md="6">
-                                    <v-text-field v-model="Nom" outlined :rules="[
+                                    <v-text-field :maxlength="max" v-model="Nom" outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
                                     ]" label="Nom"></v-text-field>
                                 </v-col>
@@ -25,7 +25,7 @@
 
                             <v-row>
                                 <v-col cols="12">
-                                    <v-text-field outlined v-model="Sujet" :rules="[
+                                    <v-text-field outlined :maxlength="max" v-model="Sujet" :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
                                     ]" label="Sujet"></v-text-field>
                                 </v-col>
@@ -33,7 +33,7 @@
 
                             <v-row>
                                 <v-col cols="12">
-                                    <v-textarea label="Votre message" v-model="Message" outlined :rules="[
+                                    <v-textarea label="Votre message" :maxlength="max-message" v-model="Message" outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
                                     ]"></v-textarea>
                                 </v-col>
@@ -73,13 +73,16 @@
     import axios from 'axios'
     export default {
         data() {
-            return {
+            return { 
+                max: '30',
+                max_message: '500',
                 Email: '',
                 Nom: '',
                 Sujet: '',
                 Message: '',
             }
         },
+        
         methods: {
             sendMessage(){
 
@@ -120,7 +123,7 @@
     }
     .success{
         width: 50%;
-        margin-top: 10px;
+        margin-top: 30px;
         margin-right: 100px;
         color: #fff;
         box-shadow: 5px 5px #ccc;
