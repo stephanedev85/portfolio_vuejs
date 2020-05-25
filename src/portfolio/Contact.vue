@@ -8,7 +8,7 @@
 
                 <v-row>
                     <v-col cols="12" md="8">
-                        <v-form ref="contactForm" v-on:submit="submitForm">
+                        <v-form ref="contactForm">
 
                             <v-row>
                                 <v-col cols="12" md="6">
@@ -71,45 +71,39 @@
 </template>
 <script>
     import axios from 'axios'
-
-
     export default {
         data() {
             return {
-
                 Email: '',
                 Nom: '',
                 Sujet: '',
                 Message: '',
-
             }
         },
-
         methods: {
-            sendMessage() {
-                if (!this.$refs.contactForm.validate()) return
+            sendMessage(){
 
-                let userInput = {
-                    Email: this.Email,
-                    Nom: this.Nom,
-                    Sujet: this.Sujet,
-                    Message: this.Message,
+                
+                    if (!this.$refs.contactForm.validate()) return
+                    let userInput = {
+                        Email: this.Email,
+                        Nom: this.Nom,
+                        Sujet: this.Sujet,
+                        Message: this.Message,
+                    }
+                    axios.post('http://localhost:4000/sendmail', userInput)
+                        .then(response => {
+                               this.$refs.contactForm.reset();
+                            console.log(response.data);
+                        })
+                        .catch(error => {
+                            console.log(error.response.data);
+                        })
+                
+            
 
-
-                }
-                axios.post('http://localhost:4000/sendmail', userInput)
-                    .then(response => {
-                           this.$refs.contactForm.reset();
-                        console.log(response.data);
-
-                    })
-                    .catch(error => {
-                        console.log(error.response.data);
-
-                    })
             }
         },
-
     }
 </script>
 <style>
@@ -120,7 +114,6 @@
         padding-top: 5px;
         padding-bottom: 10px;
     }
-
     .Mobile {
         height: 55px;
     }
