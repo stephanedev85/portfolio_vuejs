@@ -1,7 +1,7 @@
 <template>
   <diV>
     <v-card tile class="mt-5">
-      <v-card-text>
+      <v-card-text class="mt-8 mb-5">
         <v-row>
           <v-col cols="12">
             <span class="heading">Mes projets</span>
@@ -12,7 +12,7 @@
             <v-img class="img-projet" v-bind:src="Youtube" aspect-ratio="2.75"></v-img>
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">Chaîne youtube tuto developpeur</h3>
+                <h3 class="headline mb-0">Chaîne youtube</h3>
               </div>
             </v-card-title>
             <v-card-actions>
@@ -24,7 +24,7 @@
             <v-img class="img-projet" v-bind:src="Phil" aspect-ratio="2.75"></v-img>
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">Jeu vidéo réalisé en cours avec victor.</h3>
+                <h3 class="headline mb-0">Jeu vidéo Phaser.</h3>
               </div>
             </v-card-title>
             <v-card-actions>
@@ -65,7 +65,7 @@
             <v-img class="img-projet" v-bind:src="Crypto" aspect-ratio="2.75"></v-img>
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">Projet bootstrap sur la cryptomonnaie</h3>
+                <h3 class="headline mb-0">Tuto cryptomonnaie</h3>
               </div>
             </v-card-title>
             <v-card-actions>
@@ -77,7 +77,7 @@
             <v-img class="img-projet" v-bind:src="Auto" aspect-ratio="2.75"></v-img>
             <v-card-title primary-title>
               <div>
-                <h3 class="headline mb-0">EspaceAuto85 garage automobile</h3>
+                <h3 class="headline mb-0">EspaceAuto85</h3>
               </div>
             </v-card-title>
             <v-card-actions>
@@ -121,8 +121,12 @@
 
   .img-projet {
     box-shadow: 10px 10px 5px 5px grey;
-    width: 70%;
-    height: 60%;
     opacity: 0.75;
+  }
+  @media only screen and (max-device-width:480px){
+
+  }
+   @media only screen and (max-device-width:800px){
+    
   }
 </style>

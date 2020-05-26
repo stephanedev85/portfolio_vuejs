@@ -33,7 +33,7 @@
 
                             <v-row>
                                 <v-col cols="12">
-                                    <v-textarea label="Votre message" :maxlength="max-message" v-model="Message" outlined :rules="[
+                                    <v-textarea label="Message" :maxlength="max-message" v-model="Message" outlined :rules="[
                                     (v)=> !!v || 'Ce champs est requis.'
                                     ]"></v-textarea>
                                 </v-col>
@@ -42,7 +42,7 @@
                             <v-row>
                                 <v-col cols="12" align="right">
                                     <v-btn color="primary" tile @click="sendMessage">Envoyer</v-btn>
-                                    <flash-message class="Success"></flash-message>
+                                    <flash-message class="Success">{{ message }}</flash-message>
                                 </v-col>
                             </v-row>
                         </v-form>
@@ -80,6 +80,7 @@
                 Nom: '',
                 Sujet: '',
                 Message: '',
+                message: 'Email envoyé'
             }
         },
         

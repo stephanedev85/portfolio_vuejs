@@ -20,5 +20,6 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
   vuetify,
-  router
+  router,
+  VueFlashMessage
 }).$mount('#app')

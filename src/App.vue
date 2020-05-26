@@ -57,9 +57,7 @@
           </v-card-actions>
         </v-card>
       </v-content>
-
       <router-view></router-view>
-
       <v-footer class="pa-3">
         <div>&copy; {{ new Date().getFullYear() }} Desmaretz stéphane.</div>
       </v-footer>
@@ -68,7 +66,7 @@
 </template>
 
 <script>
-//  import VueRecaptcha from 'vue-recaptcha';
+
   export default {
     name: 'App',
 
@@ -155,4 +153,11 @@
     text-transform: uppercase;
     text-align: center;
   }
+
+@media screen and (max-width: 1900px) {
+.my-attr>span{
+  display: none;
+}
+}
+
 </style>
